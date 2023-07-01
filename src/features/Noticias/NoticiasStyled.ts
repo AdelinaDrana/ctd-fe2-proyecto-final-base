@@ -1,3 +1,4 @@
+import { syncBuiltinESMExports } from "module";
 import styled from "styled-components";
 
 export const ContenedorNoticias = styled.div`
@@ -101,7 +102,8 @@ export const BotonLectura = styled.button`
     background-color: #fdd835;
     color: #000;
   }
-
+  font-family: "Homer Simpson Revised", sans-serif;
+  font-size: 1.3rem;
   position: absolute;
   bottom: 0px;
 `;
@@ -207,3 +209,5 @@ export const BotonSuscribir = styled.button`
   font-weight: bold;
   font-family: "Homer Simpson Revised", sans-serif;
 `;
+
+

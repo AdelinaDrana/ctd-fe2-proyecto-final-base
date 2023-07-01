@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SuscribeImage, CloseButton as Close } from "../../assets";
-import { obtenerNoticias } from "./fakeRest";
+import { obtenerNoticias } from "./FakeApiRest";
 import {
   CloseButton,
   TarjetaModal,
@@ -19,7 +19,7 @@ import {
   BotonLectura,
   BotonSuscribir,
   CotenedorTexto,
-} from "./styled";
+} from "./NoticiasStyled";
 
 export interface INoticiasNormalizadas {
   id: number;
@@ -73,8 +73,8 @@ const Noticias = () => {
     <ContenedorNoticias>
       <TituloNoticias>Noticias de los Simpsons</TituloNoticias>
       <ListaNoticias>
-        {noticias.map((n) => (
-          <TarjetaNoticia>
+        {noticias.map((n, index) => (
+          <TarjetaNoticia key={index}>
             <ImagenTarjetaNoticia src={n.imagen} />
             <TituloTarjetaNoticia>{n.titulo}</TituloTarjetaNoticia>
             <FechaTarjetaNoticia>{n.fecha}</FechaTarjetaNoticia>

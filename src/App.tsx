@@ -1,8 +1,8 @@
 import React from "react";
-import Cita from "./features/quote/Cita";
+import Cita from "./features/Citas/Citas";
 import "./App.css";
-import Bio from "./features/bio/Bio";
-import Noticias from "./features/news/Noticias";
+import Bio from "./features/Biografias/Biografias";
+import Noticias from "./features/Noticias/Noticias";
 
 function App() {
   return (

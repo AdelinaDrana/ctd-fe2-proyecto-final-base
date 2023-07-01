@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { shallowEqual } from "react-redux";
-import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./styled";
+import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./CitasStyled";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   obtenerCitaDelEstado,
   limpiar,
   obtenerEstadoDelPedido,
   obtenerCitaDeLaAPI,
-} from "./citaSlice";
-import { obtenerMensaje } from "./utils";
+} from "./CitasSlice";
+import { obtenerMensaje } from "./Utils";
 
 function Cita() {
   const [valorInput, setValorInput] = useState("");
@@ -36,10 +36,10 @@ function Cita() {
         placeholder="Ingresa el nombre del autor"
       />
       <Boton
-        aria-label={valorInput ? "Obtener Cita" : "Obtener cita aleatoria"}
+        aria-label={valorInput ? "Obtener Cita" : "Cita aleatoria"}
         onClick={onClickObtenerCita}
       >
-        {valorInput ? "Obtener Cita" : "Obtener cita aleatoria"}
+        {valorInput ? "Obtener Cita" : "Cita aleatoria"}
       </Boton>
       <Boton aria-label="Borrar" onClick={onClickBorrar} secondary={true}>
         Borrar

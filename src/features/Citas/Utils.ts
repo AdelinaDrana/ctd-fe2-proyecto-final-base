@@ -3,7 +3,7 @@ import {
   NOMBRE_INVALIDO,
   MENSAJE_CARGANDO,
   NO_ENCONTRADO,
-} from "./constants";
+} from "./Constants";
 
 export const obtenerMensaje: (
   cita: string,
