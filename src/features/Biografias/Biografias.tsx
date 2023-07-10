@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NombresSimpsons, INFO_SIMPSONS } from "./Constants";
-// import styles from "./styles.module.css";
 import { BioContainer, BioDescription, BioImage, BioName, Button, ContainerButtons } from "./BiografiasStyled";
 
 const Bio = () => {
@@ -14,7 +13,7 @@ const Bio = () => {
   const crearBotones = () => {
     return Object.keys(INFO_SIMPSONS).map((nombre: string) => (
       <Button
-        key={nombre as string}
+        key={nombre}
         onClick={() => onClick(nombre as NombresSimpsons)}
         isActive={bioActiva.id === nombre}>
         {nombre}

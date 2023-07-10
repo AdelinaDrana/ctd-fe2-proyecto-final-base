@@ -21,8 +21,9 @@ export const obtenerCitaAsync = createAsyncThunk(
       const cita = await obtenerCita(personaje);
 
       return cita;
-    } catch (err) {
-      throw err;
+    } catch (ex) {
+      console.error(ex);
+      throw ex;
     }
   }
 );

@@ -1,4 +1,3 @@
-import { syncBuiltinESMExports } from "module";
 import styled from "styled-components";
 
 export const ContenedorNoticias = styled.div`
