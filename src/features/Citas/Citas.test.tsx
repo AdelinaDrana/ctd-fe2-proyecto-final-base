@@ -39,7 +39,7 @@ describe('Tests of the quoteSlice Component', () => {
         const button = screen.getByRole('button', { name: "Cita aleatoria" })
         fireEvent.click(button)
 
-        expect((await screen.findAllByText("CARGANDO...")).length).toBeGreaterThan(0);
+        expect(await screen.findByText("CARGANDO...")).toBeInTheDocument;
 
 
     });
@@ -52,7 +52,7 @@ describe('Tests of the quoteSlice Component', () => {
         fireEvent.change(input, { target: { value: '2524' } })
         const button = screen.getByRole('button', { name: "Obtener Cita" })
         fireEvent.click(button)
-        expect((await screen.findAllByText("Por favor ingrese un nombre válido")).length).toBeGreaterThan(0);
+        expect(await screen.findByText("Por favor ingrese un nombre válido")).toBeInTheDocument;
 
 
 
